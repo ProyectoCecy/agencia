@@ -1,0 +1,676 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial;
+  height: 300vh;
+
+}
+
+.section {
+  height: 70vh;
+  background-image: linear-gradient(#0000009a, #3d0404b3),
+    url('https://cdn-2.motorsport.com/images/amp/63vxpl7Y/s6/ferrari-vision-gran-turismo-1.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.title {
+  text-align: center;
+  line-height: 70vh;
+  font-size: 3rem;
+  color: white;
+}
+
+
+
+/* Estilos para el menú */
+.nav {
+  background: black;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Estilos para los enlaces del menú */
+.nav_link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin: 0 10px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav_link:hover {
+  box-shadow: 0px 10px 40px 0px rgb(200, 200, 200);
+}
+
+/* Estilos para el botón del menú desplegable */
+.dropbtn {
+  color: #fff;
+  background-color: #2b2d42;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+  background-color: #1f1f3d;
+}
+
+/* Estilos para el contenedor del menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilos para el contenido del menú desplegable */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #cccccc;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+
+
+/* Estilos para los botones del menú desplegable */
+.dropdown-content input {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+  background-color: #cccccc;
+}
+
+.dropdown-content input:hover {
+  cursor: pointer;
+  background-color: #3b3b3b;
+  color: white;
+}
+
+
+/* Estilos para mostrar el menú desplegable al pasar el mouse sobre el botón */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* LAS COMPRAS QUE HA HECHO DESPUES DE PONER EL BOTON DE PAGAR */
+
+
+/* CUENTA DEL USUARIO */
+#cuenta {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  height: 300px;
+  background-color: rgb(191, 191, 191);
+  border-radius: 10%;
+  z-index: 999;
+  display: none;
+}
+
+#cuenta img {
+  width: 110px;
+  height: 110px;
+  margin-top: 15px;
+  margin-left: 150px;
+}
+
+#cuenta h1 {
+  margin-top: 10px;
+  margin-left: 167px;
+}
+
+#cuenta h2 {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+#cuenta input{
+  margin-top: 30px;
+  margin-left: 110px;
+  margin-bottom: 10px;
+  display: block;
+  /* TAMANO DEL BOTON DE ANCHO */
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+  background-color: rgb(0, 128, 117);
+  color: white;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#cuenta input:hover {
+  background-color: rgb(0, 100, 85);
+}
+
+
+/* CARRITO DE COMPRAS DONDE LE APARECERA EL BOTON DE PAGAR  */
+#carrito {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: 710px;
+  background-color: rgba(8, 196, 253, 0.797);
+  border-radius: 5%;
+  z-index: 999;
+  display: none;
+}
+
+#carrito h2 {
+  margin-top: 25px;
+  margin-left: 280px;
+}
+
+#items {
+  margin-top: 60px;
+  margin-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#items div:nth-child(4) {
+  order: 1;
+}
+
+#carrito input{
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: -20px;
+  margin-left: 55px;
+  margin-bottom: 10px;
+  display: block;
+  /* TAMANO DEL BOTON DE ANCHO */
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+}
+
+#carrito input:hover {
+  background-color: darkgreen;
+}
+
+
+/* CSS DE LOS CARROS  */
+
+/* Estilos para la sección de productos */
+.section-products {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+/* Estilos para el título de la sección */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 110px;
+}
+
+/* Estilos para el contenedor de las tarjetas */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Estilos para las tarjetas de producto */
+.card {
+  width: 300px;
+  height: 430px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover para las tarjetas de producto */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para la imagen de cada tarjeta */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Estilos para el contenido de cada tarjeta */
+.card-body {
+  padding: 20px;
+}
+
+/* Estilos para el título de cada tarjeta */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Estilos para la descripción de cada tarjeta */
+.card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos para el botón de cada tarjeta */
+.btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 48%;
+  margin-left: 65px;
+  margin-top: 90px;
+}
+
+/* Efecto hover para el botón de cada tarjeta */
+.btn:hover {
+  background-color: #0072c6;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CSS DE AGREGAR AL CARRITO */
+
+.add-to-cart {
+  --background-default: #17171B;
+  --background-hover: #0A0A0C;
+  --background-scale: 1;
+  --text-color: #fff;
+  --text-o: 1;
+  --text-x: 12px;
+  --cart: #fff;
+  --cart-x: -48px;
+  --cart-y: 0px;
+  --cart-rotate: 0deg;
+  --cart-scale: .75;
+  --cart-clip: 0px;
+  --cart-clip-x: 0px;
+  --cart-tick-offset: 10px;
+  --cart-tick-color: #FF328B;
+  --shirt-y: -16px;
+  --shirt-scale: 0;
+  --shirt-color: #17171B;
+  --shirt-logo: #fff;
+  --shirt-second-y: 24px;
+  --shirt-second-color: #fff;
+  --shirt-second-logo: #17171B;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  outline: none;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  width: 164px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  font-family: inherit;
+  z-index: 999;
+}
+
+.add-to-cart:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  transition: background 0.25s;
+  background: var(--background, var(--background-default));
+  transform: scaleX(var(--background-scale)) translateZ(0);
+}
+
+.add-to-cart:not(.active):hover {
+  --background: var(--background-hover);
+}
+
+.add-to-cart span {
+  display: block;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-color);
+  opacity: var(--text-o);
+  transform: translateX(var(--text-x)) translateZ(0);
+}
+
+.add-to-cart svg {
+  display: block;
+  width: var(--svg-width, 24px);
+  height: var(--svg-height, 24px);
+  position: var(--svg-position, relative);
+  left: var(--svg-left, 0);
+  top: var(--svg-top, 0);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.add-to-cart svg path {
+  fill: var(--svg-fill, none);
+  stroke: var(--svg-stroke, none);
+  stroke-width: var(--svg-stroke-width, 2);
+}
+
+.add-to-cart .morph {
+  --svg-width: 64px;
+  --svg-height: 13px;
+  --svg-left: 50%;
+  --svg-top: -12px;
+  --svg-position: absolute;
+  --svg-fill: var(--background, var(--background-default));
+  transition: fill 0.25s;
+  pointer-events: none;
+  margin-left: -32px;
+}
+
+.add-to-cart .shirt,
+.add-to-cart .cart {
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+}
+
+.add-to-cart .shirt {
+  margin: -12px 0 0 -12px;
+  top: 0;
+  transform-origin: 50% 100%;
+  transform: translateY(var(--shirt-y)) scale(var(--shirt-scale));
+}
+
+.add-to-cart .shirt svg {
+  --svg-fill: var(--shirt-color);
+}
+
+.add-to-cart .shirt svg g {
+  --svg-fill: var(--svg-g-fill, var(--shirt-logo));
+}
+
+.add-to-cart .shirt svg.second {
+  --svg-fill: var(--shirt-second-color);
+  --svg-g-fill: var(--shirt-second-logo);
+  --svg-position: absolute;
+  -webkit-clip-path: polygon(0 var(--shirt-second-y), 24px var(--shirt-second-y), 24px 24px, 0 24px);
+  clip-path: polygon(0 var(--shirt-second-y), 24px var(--shirt-second-y), 24px 24px, 0 24px);
+}
+
+.add-to-cart .cart {
+  --svg-width: 36px;
+  --svg-height: 26px;
+  --svg-stroke: var(--cart);
+  top: 10px;
+  margin-left: -18px;
+  transform: translate(var(--cart-x), var(--cart-y)) rotate(var(--cart-rotate)) scale(var(--cart-scale)) translateZ(0);
+}
+
+.add-to-cart .cart:before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 12px;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  background: var(--cart);
+  -webkit-clip-path: polygon(0 0, 22px 0, calc(22px - var(--cart-clip-x)) var(--cart-clip), var(--cart-clip-x) var(--cart-clip));
+  clip-path: polygon(0 0, 22px 0, calc(22px - var(--cart-clip-x)) var(--cart-clip), var(--cart-clip-x) var(--cart-clip));
+}
+
+.add-to-cart .cart path.wheel {
+  --svg-stroke-width: 1.5;
+}
+
+.add-to-cart .cart path.tick {
+  --svg-stroke: var(--cart-tick-color);
+  stroke-dasharray: 10px;
+  stroke-dashoffset: var(--cart-tick-offset);
+}
+
+/* AQUI SIRVE PARA MOVER EL  BUTTON DEL CARRITO DE COMPRAS */
+.btn-1 {
+  width: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 730px;
+  margin-left: -37.900%;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+.btn-2 {
+  width: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 730px;
+  margin-left: -16.5%;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+.btn-3 {
+  width: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 730px;
+  margin-left: 5.1%;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+.btn-4 {
+  width: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 730px;
+  margin-left: 26.900%;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+.btn-5 {
+  width: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 89em;
+  margin-left: -37.900%;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+
+
+/* BOTONES DE LAS MOTOS */
+
+.btn-6 {
+  width: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 89em;
+  margin-left: -16.5%;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+.btn-7 {
+  width: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 89em;
+  margin-left: 5.1%;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+.btn-8 {
+  width: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 89em;
+  margin-left: 26.900%;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+.btn-9 {
+  width: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 1645px;
+  margin-left: -252px;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+.btn-10 {
+  width: 11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 1645px;
+  margin-left: 78px;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+
+
+/*  */
+
+.dark .add-to-cart {
+  --background-default: #fff;
+  --background-hover: #F2F2F9;
+  --text-color: #17171B;
+  --cart: #17171B;
+  --cart-tick-color: #FF328B;
+  --shirt-color: #fff;
+  --shirt-logo: #17171B;
+  --shirt-second-color: #17171B;
+  --shirt-second-logo: #fff;
+  z-index: 999;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+body .dribbble {
+  position: fixed;
+  display: block;
+  right: 20px;
+  bottom: 20px;
+}
+
+body .dribbble img {
+  display: block;
+  height: 28px;
+  z-index: 999;
+}
